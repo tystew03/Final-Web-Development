@@ -1,0 +1,48 @@
+body {
+    background-color: #f4f1ea;
+    font-family: Arial, sans-serif;
+    color: #222;
+    margin: 0;
+}
+
+.header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.nav {
+    background-color: #ddd;
+    text-align: center;
+    padding: 10px;
+}
+
+.content {
+    width: 80%;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+}
+
+img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+a {
+    color: rgb(20, 133, 254);
+}
+
+.tableau-container {
+    width: 900px;
+    max-width: 100%;
+    margin: 20px auto;
+}
+
+.tableau-container iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+}

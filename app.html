@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .box {
+            background: white;
+            width: 350px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input {
+            padding: 10px;
+            width: 80%;
+            margin-top: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <h1>Number Guessing Game</h1>
+        <p>Guess a number between 1 and 10</p>
+
+        <input type="number" id="guess" placeholder="Enter your guess">
+        <button onclick="checkGuess()">Guess</button>
+
+        <p id="result"></p>
+
+        <a href="scratch.html">Back to Scratch Page</a>
+    </div>
+
+    <script>
+        let secretNumber = Math.floor(Math.random() * 10) + 1;
+
+        function checkGuess() {
+            let guess = Number(document.getElementById("guess").value);
+            let result = document.getElementById("result");
+
+            if (!guess) {
+                result.textContent = "Please enter a number!";
+            } else if (guess === secretNumber) {
+                result.textContent = "Correct! You guessed it!";
+            } else if (guess < secretNumber) {
+                result.textContent = "Too low. Try again.";
+            } else {
+                result.textContent = "Too high. Try again.";
+            }
+        }
+    </script>
+
+</body>
+</html>
